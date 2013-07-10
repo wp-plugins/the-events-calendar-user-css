@@ -3,11 +3,11 @@ Contributors: afragen
 Tags: events, user css, css, modern tribe, tribe
 Requires at least: 3.1
 Tested up to: 3.6
-Stable tag: 0.9
+Stable tag: 0.9.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A plugin to allow users to easily add custom CSS overrides for The Events Calendar.
+A plugin to correctly load users custom CSS overrides for The Events Calendar.
 
 
 == Description ==
@@ -18,6 +18,8 @@ Automatically load /my-theme/events/events.css if it exists using wp_enqueue_sty
 User Added CSS lives in /wp-content/themes/my-theme/events/events.css for TEC 2.x.
 
 The default TEC events.css will be loaded for you.
+
+Correctly load tribe-events.css in proper order when using both TEC 3.x and TECPro 3.x.
 
 == Installation ==
 
@@ -38,13 +40,16 @@ Yes. [The Events Calendar plugin](http://wordpress.org/extend/plugins/the-events
 
 = Do I really need this? =
 
-No, if you're using The Events Calendar 3.x all you need to do is create the following structure in your theme's folder. `{YOUR_THEME}/tribe-events/tribe-events.css`. This file should contain only the override CSS. It will be loaded automatically by TEC 3.0.
+No, if you're using The Events Calendar 3.x all you need to do is create the following structure in your theme's folder. `{YOUR_THEME}/tribe-events/tribe-events.css`. This file should contain only the override CSS. It will be loaded automatically by TEC 3.0. If you're trying to override CSS in The Events Calendar PRO 3.x then you will need this as the CSS for TECP is loaded after the automatic loading of tribe-events.css.
 
 = Where can I report bugs? =
 
 Add a new topic on the [WordPress Support Forum](http://wordpress.org/tags/the-events-calendar-user-css).
 
 == Changelog ==
+
+= 0.9.1 =
+* Added sanity check to ensure isset( $tec_user_css )
 
 = 0.9 =
 * TEC 3.0 doesn't quite do it correctly. They automatically load User CSS before their CSS not after. Now works with either folder/file notation.
