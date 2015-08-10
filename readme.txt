@@ -2,7 +2,7 @@
 Contributors: afragen
 Tags: events, user css, css, modern tribe, tribe
 Requires at least: 3.7
-Tested up to: 4.1.1
+Tested up to: 4.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -37,6 +37,9 @@ No, if you're using The Events Calendar 3.x all you need to do is create the fol
 Add a new topic on the [WordPress Support Forum](http://wordpress.org/tags/the-events-calendar-user-css).
 
 == Changelog ==
+
+= 1.4.1 =
+* tested to 4.3
 
 = 1.4.0 =
 * Removed requirement for ECP as builtin feature of TEC still doesn't load the override stylesheet after the theme's stylesheet.
@@ -127,7 +130,7 @@ Add a new topic on the [WordPress Support Forum](http://wordpress.org/tags/the-e
 = 0.4 =
 * Major code cleanup, Thanks Daniel Dvorkin
 
-= 0.3 = 
+= 0.3 =
 * fixes
 
 = 0.2 =
